@@ -1,0 +1,162 @@
+/* ------------------------------------------------------- Team ------------------------------------------------------- */
+.swiper.is-team {
+    overflow: visible;
+}
+
+.swiper-pagination.is-team {
+    position: static;
+    text-align: left;
+}
+
+.swiper-pagination.is-team .swiper-pagination-bullet {
+    margin: 0 4px;
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--base-color-brand--blue-dark);
+    opacity: 1;
+}
+
+.swiper-pagination.is-team .swiper-pagination-bullet-active {
+    background: var(--base-color-brand--blue);
+}
+
+.swiper-button-prev.is-team,
+.swiper-button-next.is-team {
+    position: static;
+    width: 48px !important;
+    height: 48px !important;
+    margin-top: 0;
+}
+
+.swiper-button-prev.is-team::after,
+.swiper-button-next.is-team::after {
+    display: none;
+}
+
+
+/* ------------------------------------------------------- Lab Steps ------------------------------------------------------- */
+.swiper-pagination.is-lab-steps {
+    position: static;
+    text-align: left;
+}
+
+.swiper.is-lab-steps .swiper-slide {
+    height: auto;
+}
+
+.swiper.is-lab-steps .swiper-slide .card-wrapper {
+    height: 100%;
+}
+
+.swiper-pagination.is-lab-steps .swiper-pagination-bullet {
+    margin: 0 4px;
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--base-color-brand--green-dark);
+    opacity: 1;
+}
+
+.swiper-pagination.is-lab-steps .swiper-pagination-bullet-active {
+    background: var(--base-color-brand--green);
+}
+
+.swiper-button-prev.is-lab-steps,
+.swiper-button-next.is-lab-steps {
+    position: static;
+    width: 48px !important;
+    height: 48px !important;
+    margin-top: 0;
+}
+
+.swiper-button-prev.is-lab-steps::after,
+.swiper-button-next.is-lab-steps::after {
+    display: none;
+}
+
+/* ------------------------------------------------------- Lab Projects ------------------------------------------------------- */
+.swiper-wrapper.is-lab-projects {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.swiper-pagination.is-lab-projects {
+    position: static;
+    text-align: left;
+}
+
+.swiper.is-lab-projects .swiper-slide {
+    height: 100%;
+}
+
+.swiper-pagination.is-lab-projects .swiper-pagination-bullet {
+    margin: 0 4px;
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--base-color-brand--green-dark);
+    opacity: 1;
+}
+
+.swiper-pagination.is-lab-projects .swiper-pagination-bullet-active {
+    background: var(--base-color-brand--green);
+}
+
+.swiper-button-prev.is-lab-projects,
+.swiper-button-next.is-lab-projects {
+    position: static;
+    width: 48px !important;
+    height: 48px !important;
+    margin-top: 0;
+}
+
+.swiper-button-prev.is-lab-projects::after,
+.swiper-button-next.is-lab-projects::after {
+    display: none;
+}
+
+
+/* ------------------------------------------------------- Lab Projects ------------------------------------------------------- */
+.swiper-wrapper.is-mobility-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.swiper-pagination.is-mobility-gallery {
+    position: static;
+    text-align: left;
+}
+
+.swiper.is-mobility-gallery .swiper-slide {
+    width: auto;
+}
+
+.swiper.is-mobility-gallery .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.swiper-pagination.is-mobility-gallery .swiper-pagination-bullet {
+    margin: 0 4px;
+    width: 8px !important;
+    height: 8px !important;
+    background: var(--base-color-brand--orange-dark);
+    opacity: 1;
+}
+
+.swiper-pagination.is-mobility-gallery .swiper-pagination-bullet-active {
+    background: var(--base-color-brand--orange);
+}
+
+.swiper-button-prev.is-mobility-gallery,
+.swiper-button-next.is-mobility-gallery {
+    position: static;
+    width: 48px !important;
+    height: 48px !important;
+    margin-top: 0;
+}
+
+.swiper-button-prev.is-mobility-gallery::after,
+.swiper-button-next.is-mobility-gallery::after {
+    display: none;
+}
