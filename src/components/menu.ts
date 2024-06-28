@@ -32,7 +32,7 @@ export class Menu {
     });
 
     // Add hover effect on the main menu links
-    $('.navbar_link').on('mouseenter', (evt: JQuery.Event) => {
+    $('.navbar_link').on('mouseenter', (evt: JQuery.TriggeredEvent) => {
       gsap.to('.navbar_link', {
         opacity: 0.2,
         duration: 0.3,
