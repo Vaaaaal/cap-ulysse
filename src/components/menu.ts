@@ -32,14 +32,14 @@ export class Menu {
     });
 
     // Add hover effect on the main menu links
-    $('.navbar_link').on('mouseenter', (evt: MouseEvent) => {
+    $('.navbar_link').on('mouseenter', (evt: JQuery.Event) => {
       gsap.to('.navbar_link', {
         opacity: 0.2,
         duration: 0.3,
         ease: 'power2.easeOut',
       });
 
-      if (!$(evt.target).hasClass('is-dropdown')) {
+      if (evt.target && !$(evt.target).hasClass('is-dropdown')) {
         this.dropdown = false;
         this.hideDropdown();
         $('.navbar_link:not(.is-dropdown)').removeClass('is-deactived');
