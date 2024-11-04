@@ -8,13 +8,31 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  let mm = gsap.matchMedia();
+  // let mm = gsap.matchMedia();
+
+  if ($('.project-details_header_content')) {
+    const projectTags = $('.project-details_header_content').text().split(',');
+    if (projectTags.length > 0) {
+      $('.project-details_header_content').remove();
+      projectTags.forEach((tag) => {
+        $('.project-details_header_content_wrapper').append(
+          `<div class='project-details_header_content'>${tag.trim()}</div>`
+        );
+      });
+    }
+  }
+
+  if ($('.project-details_benefits_card_content_partners')) {
+    if ($('.project-details_benefits_card_content_partners').text().length <= 2) {
+      $('.project-details_benefits_card_content_partners').css('font-size', '20ch');
+    }
+  }
 
   gsap.set('.team_image_shape', {
     yPercent: -100,
   });
 
-  $('.swiper-slide.is-team')
+  $('.project-details_team_list_item')
     .on('mouseenter', function () {
       const tl = gsap.timeline();
 
@@ -63,36 +81,23 @@ window.Webflow.push(() => {
     });
 
   // Init swiper sliders
-  new Swiper('.swiper.is-team', {
+  new Swiper('.swiper.is-project-detail-testimonial', {
     slidesPerView: 1,
-    spaceBetween: 28,
+    spaceBetween: 32,
     breakpoints: {
       992: {
-        slidesPerView: 3,
-      },
-      768: {
         slidesPerView: 2,
       },
     },
+    loop: true,
     modules: [Navigation, Pagination],
     navigation: {
-      nextEl: '.swiper-button-next.is-team',
-      prevEl: '.swiper-button-prev.is-team',
+      nextEl: '.swiper-button-next.is-project-detail-testimonial',
+      prevEl: '.swiper-button-prev.is-project-detail-testimonial',
     },
     pagination: {
-      el: '.swiper-pagination.is-team',
+      el: '.swiper-pagination.is-project-detail-testimonial',
       clickable: true,
     },
-  });
-  $('.slider_controls.is-team').css('display', 'flex');
-  $('.swiper-slide.is-team').css('max-width', '100%');
-  $('.swiper-wrapper.is-team').css('column-gap', '0');
-
-  mm.add('(max-width: 767px)', () => {
-    new Swiper('.swiper.is-about-timeline', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      autoHeight: true,
-    });
   });
 });

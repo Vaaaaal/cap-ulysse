@@ -40,8 +40,8 @@ export class Menu {
       });
 
       if (evt.target && !$(evt.target).hasClass('is-dropdown')) {
-        this.dropdown = false;
-        this.hideDropdown();
+        // this.dropdown = false;
+        // this.hideDropdown();
         $('.navbar_link:not(.is-dropdown)').removeClass('is-deactived');
       }
     });
@@ -56,8 +56,8 @@ export class Menu {
     // Display dropdown links on click
     $('.navbar_link.is-dropdown').on('click', () => {
       $('.navbar_link:not(.is-dropdown)').addClass('is-deactived');
-      this.displayDropdown();
-      this.dropdown = true;
+      // this.displayDropdown();
+      // this.dropdown = true;
     });
 
     // Add hover effect on the second menu links
@@ -75,6 +75,12 @@ export class Menu {
         ease: 'power2.easeIn',
       });
     });
+
+    $(this.panel)
+      .find('.navbar_panel_overlay')
+      .on('click', () => {
+        this.closeMenu();
+      });
   }
 
   /**
@@ -187,36 +193,36 @@ export class Menu {
       );
   }
 
-  /**
-   * Display the dropdown
-   */
-  displayDropdown() {
-    gsap.set('.navbar_link_list_second', { display: 'flex' });
-    gsap.to('.navbar_link_second', {
-      opacity: 1,
-      duration: 0.3,
-      stagger: {
-        amount: 0.1,
-      },
-      ease: 'power2.easeOut',
-    });
-  }
+  // /**
+  //  * Display the dropdown
+  //  */
+  // displayDropdown() {
+  //   gsap.set('.navbar_link_list_second', { display: 'flex' });
+  //   gsap.to('.navbar_link_second', {
+  //     opacity: 1,
+  //     duration: 0.3,
+  //     stagger: {
+  //       amount: 0.1,
+  //     },
+  //     ease: 'power2.easeOut',
+  //   });
+  // }
 
-  /**
-   * Hide the dropdown
-   */
-  hideDropdown() {
-    gsap.to('.navbar_link_second', {
-      opacity: 0,
-      stagger: {
-        amount: 0.1,
-        from: 'end',
-      },
-      duration: 0.3,
-      ease: 'power2.easeIn',
-      onComplete: () => {
-        gsap.set('.navbar_link_list_second', { display: 'none' });
-      },
-    });
-  }
+  // /**
+  //  * Hide the dropdown
+  //  */
+  // hideDropdown() {
+  //   gsap.to('.navbar_link_second', {
+  //     opacity: 0,
+  //     stagger: {
+  //       amount: 0.1,
+  //       from: 'end',
+  //     },
+  //     duration: 0.3,
+  //     ease: 'power2.easeIn',
+  //     onComplete: () => {
+  //       gsap.set('.navbar_link_list_second', { display: 'none' });
+  //     },
+  //   });
+  // }
 }

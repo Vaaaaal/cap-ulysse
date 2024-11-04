@@ -47,13 +47,19 @@
   color: var(--base-color-brand--pink-dark);
 }
 
+/* ------------------------------------------------------ Accordion ------------------------------------------------------ */
+.formations-details_content_infos_list .formations-details_content_infos_item:first-child {
+  border-top: 0px solid transparent;
+  padding-top: 0;
+}
+
+.formations-details_content_infos_list .formations-details_content_infos_item:last-child {
+  padding-bottom: 0;
+}
+
 /* ------------------------------------------------------ Navbar ------------------------------------------------------ */
 .navbar_link_arrow {
   opacity: 0;
-}
-
-.navbar_link_list_second {
-  display: none;
 }
 
 .navbar_link:hover {
@@ -64,27 +70,92 @@
   opacity: 0.2 !important;
 }
 
-.navbar_link_second {
+/* .navbar_link_second {
   opacity: 0;
-}
+} */
 
 .navbar_link_second:hover {
   opacity: 1 !important;
 }
 
 /* ------------------------------------------------------ Mobility ------------------------------------------------------ */
-.timeline_component.is-mobility .timeline_pin {
+.timeline_content_wrapper_container .timeline_pin {
   color: var(--base-color-brand--orange);
 }
 
-.timeline_component.is-mobility .timeline_bar {
+.timeline_content_wrapper_container .timeline_bar {
   background: var(--base-color-brand--orange);
 }
 
-.timeline_component.is-mobility .timeline_bar.is-gradient {
+.timeline_content_wrapper_container .timeline_bar.is-gradient {
   background: linear-gradient(90deg, rgba(255, 136, 26, 0), rgba(255, 136, 26, 1));
 }
 
-.timeline_component.is-mobility .timeline_bar.is-gradient-inverse {
+.timeline_content_wrapper_container .timeline_bar.is-gradient-inverse {
   background: linear-gradient(90deg, rgba(255, 136, 26, 1), rgba(255, 136, 26, 0));
+}
+
+/* ------------------------------------------------------ About ------------------------------------------------------ */
+.timeline_content_wrapper_container.is-about .timeline_pin {
+  color: #e0e0e0;
+}
+
+.timeline_content_wrapper_container.is-about .timeline_bar {
+  background: #e0e0e0;
+}
+
+.timeline_content_wrapper_container.is-about .timeline_bar.is-gradient {
+  background: linear-gradient(90deg, #e0e0e000, #e0e0e0);
+}
+
+.timeline_content_wrapper_container.is-about .timeline_bar.is-gradient-inverse {
+  background: linear-gradient(90deg, #e0e0e0, #e0e0e000);
+}
+
+.team_image_wrapper[data-bg-color='Bleu'] {
+  color: var(--base-color-brand--blue-dark);
+  background-color: var(--base-color-brand--blue);
+}
+.team_image_wrapper[data-bg-color='Orange'] {
+  color: var(--base-color-brand--orange-dark);
+  background-color: var(--base-color-brand--orange);
+}
+.team_image_wrapper[data-bg-color='Vert'] {
+  color: var(--base-color-brand--green-dark);
+  background-color: var(--base-color-brand--green);
+}
+.team_image_wrapper[data-bg-color='Rose'] {
+  color: var(--base-color-brand--pink-dark);
+  background-color: var(--base-color-brand--pink);
+}
+
+/* ------------------------------------------------------ FAQs Filters ------------------------------------------------------ */
+label.faq_filters_btn:has(input[type='radio']:checked) {
+  background-color: var(--base-color-brand--black);
+  color: var(--base-color-brand--white);
+}
+
+/* ------------------------------------------------------ Blog ------------------------------------------------------ */
+.blog_articles_featured_list_item_infos_title,
+.blog_articles_featured_list_item_resume {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.blog_articles_featured_thumb_list_item_infos_title {
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+/* ------------------------------------------------------ Formations details ------------------------------------------------------ */
+.text-rich-text.is-formation-details-second-bloc ul {
+  list-style-type: '◆';
+}
+
+.text-rich-text.is-formation-details-content-targets ul {
+  list-style-type: '\2705';
 }
