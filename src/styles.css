@@ -97,40 +97,40 @@
 
 /* ------------------------------------------------------ About ------------------------------------------------------ */
 .timeline_content_wrapper_container.is-about .timeline_pin {
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 .timeline_content_wrapper_container.is-about .timeline_bar {
-  background: #E0E0E0;
+  background: #e0e0e0;
 }
 
 .timeline_content_wrapper_container.is-about .timeline_bar.is-gradient {
-  background: linear-gradient(90deg, #E0E0E000, #e0e0e0);
+  background: linear-gradient(90deg, #e0e0e000, #e0e0e0);
 }
 
 .timeline_content_wrapper_container.is-about .timeline_bar.is-gradient-inverse {
-  background: linear-gradient(90deg, #E0E0E0, #E0E0E000);
+  background: linear-gradient(90deg, #e0e0e0, #e0e0e000);
 }
 
-.team_image_wrapper[data-bg-color="Bleu"] {
+.team_image_wrapper[data-bg-color='Bleu'] {
   color: var(--base-color-brand--blue-dark);
   background-color: var(--base-color-brand--blue);
 }
-.team_image_wrapper[data-bg-color="Orange"] {
+.team_image_wrapper[data-bg-color='Orange'] {
   color: var(--base-color-brand--orange-dark);
   background-color: var(--base-color-brand--orange);
 }
-.team_image_wrapper[data-bg-color="Vert"] {
+.team_image_wrapper[data-bg-color='Vert'] {
   color: var(--base-color-brand--green-dark);
   background-color: var(--base-color-brand--green);
 }
-.team_image_wrapper[data-bg-color="Rose"] {
+.team_image_wrapper[data-bg-color='Rose'] {
   color: var(--base-color-brand--pink-dark);
   background-color: var(--base-color-brand--pink);
 }
 
 /* ------------------------------------------------------ FAQs Filters ------------------------------------------------------ */
-label.faq_filters_btn:has(input[type="radio"]:checked) {
+label.faq_filters_btn:has(input[type='radio']:checked) {
   background-color: var(--base-color-brand--black);
   color: var(--base-color-brand--white);
 }
@@ -153,9 +153,9 @@ label.faq_filters_btn:has(input[type="radio"]:checked) {
 
 /* ------------------------------------------------------ Formations details ------------------------------------------------------ */
 .text-rich-text.is-formation-details-second-bloc ul {
-  list-style-type: "◆";
+  list-style-type: '◆';
 }
 
 .text-rich-text.is-formation-details-content-targets ul {
-  list-style-type: "\2705";
+  list-style-type: '\2705';
 }
