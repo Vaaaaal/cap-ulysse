@@ -9,8 +9,13 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   // Init swiper sliders
   new Swiper('.swiper.is-lab-steps', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 32,
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+      },
+    },
     modules: [Navigation, Pagination],
     navigation: {
       nextEl: '.swiper-button-next.is-lab-steps',
@@ -23,8 +28,16 @@ window.Webflow.push(() => {
   });
 
   new Swiper('.swiper.is-lab-projects', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 32,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+    },
     loop: true,
     modules: [Navigation, Pagination],
     navigation: {

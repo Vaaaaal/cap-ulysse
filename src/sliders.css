@@ -26,6 +26,7 @@
   width: 48px !important;
   height: 48px !important;
   margin-top: 0;
+  color: var(--base-color-brand--blue-dark);
 }
 
 .swiper-button-prev.is-team::after,
@@ -33,7 +34,17 @@
   display: none;
 }
 
+/* ------------------------------------------------------- About Timeline ------------------------------------------------------- */
+.swiper-wrapper.is-about-timeline {
+  flex-flow: row;
+}
+
 /* ------------------------------------------------------- Lab Steps ------------------------------------------------------- */
+.swiper-wrapper.is-lab-steps {
+  display: flex;
+  flex-direction: row;
+}
+
 .swiper-pagination.is-lab-steps {
   position: static;
   text-align: left;
@@ -69,6 +80,86 @@
 
 .swiper-button-prev.is-lab-steps::after,
 .swiper-button-next.is-lab-steps::after {
+  display: none;
+}
+
+/* ------------------------------------------------------- Project Details Testimonial ------------------------------------------------------- */
+.swiper-wrapper.is-project-detail-testimonial {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-pagination.is-project-detail-testimonial {
+  position: static;
+  text-align: left;
+}
+
+.swiper.is-project-detail-testimonial .swiper-slide {
+  height: auto;
+}
+
+.swiper.is-project-detail-testimonial .swiper-slide .card-wrapper {
+  height: 100%;
+}
+
+.swiper-pagination.is-project-detail-testimonial .swiper-pagination-bullet {
+  margin: 0 4px;
+  width: 8px !important;
+  height: 8px !important;
+  background: var(--base-color-brand--green-dark);
+  opacity: 1;
+}
+
+.swiper-pagination.is-project-detail-testimonial .swiper-pagination-bullet-active {
+  background: var(--base-color-brand--green);
+}
+
+.swiper-button-prev.is-project-detail-testimonial,
+.swiper-button-next.is-project-detail-testimonial {
+  position: static;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: 0;
+}
+
+.swiper-button-prev.is-project-detail-testimonial::after,
+.swiper-button-next.is-project-detail-testimonial::after {
+  display: none;
+}
+
+/* ------------------------------------------------------- Project Details Team ------------------------------------------------------- */
+.swiper.is-project-details-team {
+  overflow: visible;
+}
+
+.swiper-pagination.is-project-details-team {
+  position: static;
+  text-align: left;
+}
+
+.swiper-pagination.is-project-details-team .swiper-pagination-bullet {
+  margin: 0 4px;
+  width: 8px !important;
+  height: 8px !important;
+  background: var(--base-color-brand--green-dark);
+  opacity: 1;
+}
+
+.swiper-pagination.is-project-details-team .swiper-pagination-bullet-active {
+  background: var(--base-color-brand--green);
+}
+
+.swiper-button-prev.is-project-details-team,
+.swiper-button-next.is-project-details-team {
+  position: static;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: 0;
+  color: var(--base-color-brand--green-dark);
+}
+
+.swiper-button-prev.is-project-details-team::after,
+.swiper-button-next.is-project-details-team::after {
   display: none;
 }
 
@@ -112,7 +203,12 @@
   display: none;
 }
 
-/* ------------------------------------------------------- Lab Projects ------------------------------------------------------- */
+/* ------------------------------------------------------- Mobility Timeline In ------------------------------------------------------- */
+.swiper-wrapper.is-mobility-timeline {
+  flex-direction: row;
+}
+
+/* ------------------------------------------------------- Mobility Gallery ------------------------------------------------------- */
 .swiper-wrapper.is-mobility-gallery {
   display: flex;
   flex-wrap: nowrap;
@@ -125,12 +221,14 @@
 
 .swiper.is-mobility-gallery .swiper-slide {
   width: auto;
+  max-width: 100%;
 }
 
 .swiper.is-mobility-gallery .swiper-slide img {
   width: 100%;
   height: 100%;
   max-height: 70vh;
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -156,5 +254,140 @@
 
 .swiper-button-prev.is-mobility-gallery::after,
 .swiper-button-next.is-mobility-gallery::after {
+  display: none;
+}
+
+/* ------------------------------------------------------- Blog featured ------------------------------------------------------- */
+.swiper-wrapper.is-blog-featured {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.swiper-wrapper.is-blog-featured-next {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+.swiper-slide.is-blog-featured-next {
+  background: var(--base-color-brand--white);
+}
+
+.swiper-button-next.is-blog-featured {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+.swiper-button-next.is-blog-featured:after {
+  display: none;
+}
+
+.blog_articles_featured_thumb_list_item_infos_next_icon {
+  width: 14px !important;
+}
+
+@media screen and (max-width: 991px) {
+  .swiper-button-next.is-blog-featured {
+    width: auto;
+    color: var(--swiper-navigation-color, var(--base-color-brand--black));
+  }
+
+  .blog_articles_featured_thumb_list_item_infos_next_icon {
+    width: 30px !important;
+  }
+}
+
+.swiper-slide {
+  flex: auto;
+}
+
+/* ------------------------------------------------------- Formation Details Testimonial ------------------------------------------------------- */
+.swiper-wrapper.is-formations-details-testimonial {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-pagination.is-formations-details-testimonial {
+  position: static;
+  text-align: left;
+}
+
+.swiper.is-formations-details-testimonial .swiper-slide {
+  height: auto;
+}
+
+.swiper.is-formations-details-testimonial .swiper-slide .card-wrapper {
+  height: 100%;
+}
+
+.swiper-pagination.is-formations-details-testimonial .swiper-pagination-bullet {
+  margin: 0 4px;
+  width: 8px !important;
+  height: 8px !important;
+  background: var(--base-color-brand--pink-dark);
+  opacity: 1;
+}
+
+.swiper-pagination.is-formations-details-testimonial .swiper-pagination-bullet-active {
+  background: var(--base-color-brand--pink);
+}
+
+.swiper-button-prev.is-formations-details-testimonial,
+.swiper-button-next.is-formations-details-testimonial {
+  position: static;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: 0;
+}
+
+.swiper-button-prev.is-formations-details-testimonial::after,
+.swiper-button-next.is-formations-details-testimonial::after {
+  display: none;
+}
+
+
+/* ------------------------------------------------------- Formations Categorie Modal ------------------------------------------------------- */
+.swiper-wrapper.is-categorie-modal {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-pagination.is-categorie-modal {
+  position: static;
+  text-align: left;
+}
+
+.swiper.is-categorie-modal .swiper-slide {
+  height: auto;
+}
+
+.swiper.is-categorie-modal .swiper-slide .card-wrapper {
+  height: 100%;
+}
+
+.swiper-pagination.is-categorie-modal .swiper-pagination-bullet {
+  margin: 0 4px;
+  width: 8px !important;
+  height: 8px !important;
+  background: var(--base-color-brand--pink-dark);
+  opacity: 1;
+}
+
+.swiper-pagination.is-categorie-modal .swiper-pagination-bullet-active {
+  background: var(--base-color-brand--pink);
+}
+
+.swiper-button-prev.is-categorie-modal,
+.swiper-button-next.is-categorie-modal {
+  position: static;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: 0;
+}
+
+.swiper-button-prev.is-categorie-modal::after,
+.swiper-button-next.is-categorie-modal::after {
   display: none;
 }

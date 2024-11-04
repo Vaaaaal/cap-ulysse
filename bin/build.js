@@ -11,7 +11,11 @@ const ENTRY_POINTS = [
   'src/index.ts',
   'src/pages/about',
   'src/pages/lab',
+  'src/pages/project-details',
   'src/pages/mobility',
+  'src/pages/blog',
+  'src/pages/formation-details',
+  'src/pages/formations',
   'src/styles.css',
   'src/sliders.css',
 ];
