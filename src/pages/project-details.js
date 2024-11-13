@@ -2,7 +2,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import gsap from 'gsap';
 import { Swiper } from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
@@ -27,58 +26,6 @@ window.Webflow.push(() => {
       $('.project-details_benefits_card_content_partners').css('font-size', '20ch');
     }
   }
-
-  gsap.set('.team_image_shape', {
-    yPercent: -100,
-  });
-
-  $('.project-details_team_list_item')
-    .on('mouseenter', function () {
-      const tl = gsap.timeline();
-
-      tl.to($(this).find('.team_image_classique'), {
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power3.in',
-      }).to(
-        $(this).find('.team_image_special'),
-        {
-          opacity: 1,
-          duration: 0.3,
-          ease: 'power3.out',
-        },
-        '<=0.1'
-      );
-
-      gsap.to($(this).find('.team_image_shape'), {
-        yPercent: 0,
-        duration: 0.4,
-        ease: 'power3.inOut',
-      });
-    })
-    .on('mouseleave', function () {
-      const tl = gsap.timeline();
-
-      tl.to($(this).find('.team_image_special'), {
-        opacity: 0,
-        duration: 0.3,
-        ease: 'power3.in',
-      }).to(
-        $(this).find('.team_image_classique'),
-        {
-          opacity: 1,
-          duration: 0.3,
-          ease: 'power3.out',
-        },
-        '<=0.1'
-      );
-
-      gsap.to($(this).find('.team_image_shape'), {
-        yPercent: -100,
-        duration: 0.4,
-        ease: 'power3.inOut',
-      });
-    });
 
   // Init swiper sliders
   new Swiper('.swiper.is-project-detail-testimonial', {
