@@ -61,4 +61,59 @@ window.Webflow.push(() => {
   const button = document.querySelector('.button.is-menu-button') as HTMLButtonElement;
   const panel = document.querySelector('.navbar_panel_wrapper') as HTMLButtonElement;
   new Menu(button, panel);
+
+  // Init animation on CU members hover
+  if (document.querySelector('.team_image_shape')) {
+    gsap.set('.team_image_shape', {
+      yPercent: -100,
+    });
+
+    $('.project-details_team_list_item')
+      .on('mouseenter', function () {
+        const tl = gsap.timeline();
+
+        tl.to($(this).find('.team_image_classique'), {
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power3.in',
+        }).to(
+          $(this).find('.team_image_special'),
+          {
+            opacity: 1,
+            duration: 0.3,
+            ease: 'power3.out',
+          },
+          '<=0.1'
+        );
+
+        gsap.to($(this).find('.team_image_shape'), {
+          yPercent: 0,
+          duration: 0.4,
+          ease: 'power3.inOut',
+        });
+      })
+      .on('mouseleave', function () {
+        const tl = gsap.timeline();
+
+        tl.to($(this).find('.team_image_special'), {
+          opacity: 0,
+          duration: 0.3,
+          ease: 'power3.in',
+        }).to(
+          $(this).find('.team_image_classique'),
+          {
+            opacity: 1,
+            duration: 0.3,
+            ease: 'power3.out',
+          },
+          '<=0.1'
+        );
+
+        gsap.to($(this).find('.team_image_shape'), {
+          yPercent: -100,
+          duration: 0.4,
+          ease: 'power3.inOut',
+        });
+      });
+  }
 });
