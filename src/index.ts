@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { TextPlugin } from 'gsap/TextPlugin';
 
@@ -6,6 +7,7 @@ import { Accordion } from '$components/accordion';
 import { Magnetic } from '$components/magnetic';
 import { Menu } from '$components/menu';
 import { greetUser } from '$utils/greet';
+import { pageTransition } from '$utils/page-transition';
 import { sortFamily } from '$utils/sort';
 
 window.Webflow ||= [];
@@ -15,7 +17,7 @@ window.Webflow.push(() => {
   greetUser(name);
 
   // Initialize the GSAP plugins
-  gsap.registerPlugin(SplitText, TextPlugin);
+  gsap.registerPlugin(SplitText, TextPlugin, ScrollTrigger);
 
   // Initialize the magnetic effect to element with attributes [data-magnetic="box"] and [data-magnetic="item"]
   const magneticBoxes = document.querySelectorAll('[data-magnetic="box"]');
@@ -116,4 +118,51 @@ window.Webflow.push(() => {
         });
       });
   }
+
+  /**
+   * Transition page on link click
+   */
+  // Init page transition
+  $('a').on('click', function (e) {
+    if (
+      $(this).prop('hostname') === window.location.host &&
+      $(this).attr('href')?.indexOf('#') === -1 &&
+      $(this).attr('target') !== '_blank'
+    ) {
+      e.preventDefault();
+      const destination = $(this).attr('href');
+      pageTransition(destination);
+    }
+  });
+
+  // On click of the back button
+  window.onpageshow = function (event) {
+    if (event.persisted) {
+      window.location.reload();
+    }
+  };
+
+  // Fade in / out on all section apparition with ScrollTrigger
+  const sections = document.querySelector('.main-wrapper')?.children;
+  Array.from(sections || []).forEach((section) => {
+    gsap.to(section, {
+      opacity: 1,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 70%',
+        end: 'top -10000%',
+        toggleActions: 'play reverse play reverse',
+      },
+    });
+  });
+
+  // Apparition for navbar
+  const navbar = document.querySelector('.navbar') as HTMLElement;
+  gsap.to(navbar, {
+    y: 0,
+    duration: 0.6,
+    ease: 'power3.out',
+    delay: 0.2,
+  });
 });

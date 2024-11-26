@@ -47,6 +47,11 @@
   color: var(--base-color-brand--pink-dark);
 }
 
+/* ------------------------------------------ All Sections (Main wrapper child) ------------------------------------------ */
+.main-wrapper > * {
+  opacity: 0;
+}
+
 /* ------------------------------------------------------ Accordion ------------------------------------------------------ */
 .formations-details_content_infos_list .formations-details_content_infos_item:first-child {
   border-top: 0px solid transparent;
@@ -58,6 +63,10 @@
 }
 
 /* ------------------------------------------------------ Navbar ------------------------------------------------------ */
+.navbar {
+  transform: translateY(-110%);
+}
+
 .navbar_link_arrow {
   opacity: 0;
 }
