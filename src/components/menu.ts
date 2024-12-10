@@ -143,6 +143,15 @@ export class Menu {
           ease: 'power2.easeOut',
         },
         '-=0.1'
+      )
+      .to(
+        '.navbar_content_blog',
+        {
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power2.easeOut',
+        },
+        '-=0.1'
       );
   }
 
@@ -161,17 +170,25 @@ export class Menu {
       },
     });
 
-    tl.to($(this.panel).find('.navbar_link .navbar_link_arrow'), {
+    tl.to('.navbar_content_blog', {
       opacity: 0,
       duration: 0.2,
       ease: 'power2.easeInOut',
     })
+      .to(
+        $(this.panel).find('.navbar_link .navbar_link_arrow'),
+        {
+          opacity: 0,
+          duration: 0.2,
+          ease: 'power2.easeInOut',
+        },
+        '<'
+      )
       .to($(this.panel).find('.navbar_link div'), {
         yPercent: 130,
         duration: 0.5,
         ease: 'power2.easeInOut',
       })
-
       .to($(this.panel).find('.navbar_panel_overlay'), {
         opacity: 0,
         duration: 0.6,
@@ -192,37 +209,4 @@ export class Menu {
         '<'
       );
   }
-
-  // /**
-  //  * Display the dropdown
-  //  */
-  // displayDropdown() {
-  //   gsap.set('.navbar_link_list_second', { display: 'flex' });
-  //   gsap.to('.navbar_link_second', {
-  //     opacity: 1,
-  //     duration: 0.3,
-  //     stagger: {
-  //       amount: 0.1,
-  //     },
-  //     ease: 'power2.easeOut',
-  //   });
-  // }
-
-  // /**
-  //  * Hide the dropdown
-  //  */
-  // hideDropdown() {
-  //   gsap.to('.navbar_link_second', {
-  //     opacity: 0,
-  //     stagger: {
-  //       amount: 0.1,
-  //       from: 'end',
-  //     },
-  //     duration: 0.3,
-  //     ease: 'power2.easeIn',
-  //     onComplete: () => {
-  //       gsap.set('.navbar_link_list_second', { display: 'none' });
-  //     },
-  //   });
-  // }
 }

@@ -11,16 +11,18 @@ import { Splitter } from '$components/splitter';
 window.Webflow ||= [];
 window.Webflow.push(() => {
   // Init swiper sliders
-  new Swiper('.swiper.is-mobility-gallery', {
-    slidesPerView: 'auto',
-    spaceBetween: 28,
-    loop: true,
-    modules: [Navigation],
-    navigation: {
-      nextEl: '.swiper-button-next.is-mobility-gallery',
-      prevEl: '.swiper-button-prev.is-mobility-gallery',
-    },
-  });
+  if (document.querySelectorAll('.swiper-slide.is-mobility-hero').length > 1) {
+    new Swiper('.swiper.is-mobility-gallery', {
+      slidesPerView: 'auto',
+      spaceBetween: 28,
+      loop: true,
+      modules: [Navigation],
+      navigation: {
+        nextEl: '.swiper-button-next.is-mobility-gallery',
+        prevEl: '.swiper-button-prev.is-mobility-gallery',
+      },
+    });
+  }
 
   let mm = gsap.matchMedia();
 

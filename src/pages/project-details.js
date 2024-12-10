@@ -9,8 +9,9 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   // let mm = gsap.matchMedia();
 
-  if ($('.project-details_header_content')) {
+  if (!$('.project-details_header_content').hasClass('is-mobility')) {
     const projectTags = $('.project-details_header_content').text().split(',');
+
     if (projectTags.length > 0) {
       $('.project-details_header_content').remove();
       projectTags.forEach((tag) => {

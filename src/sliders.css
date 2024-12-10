@@ -127,6 +127,51 @@
   display: none;
 }
 
+
+/* ------------------------------------------------------- Project Details Testimonial Mobility ------------------------------------------------------- */
+.swiper-wrapper.is-project-detail-testimonial.is-mobility {
+  display: flex;
+  flex-direction: row;
+}
+
+.swiper-pagination.is-project-detail-testimonial.is-mobility {
+  position: static;
+  text-align: left;
+}
+
+.swiper.is-project-detail-testimonial.is-mobility .swiper-slide {
+  height: auto;
+}
+
+.swiper.is-project-detail-testimonial .swiper-slide .card-wrapper {
+  height: 100%;
+}
+
+.swiper-pagination.is-project-detail-testimonial.is-mobility .swiper-pagination-bullet {
+  margin: 0 4px;
+  width: 8px !important;
+  height: 8px !important;
+  background: var(--base-color-brand--orange-dark);
+  opacity: 1;
+}
+
+.swiper-pagination.is-project-detail-testimonial.is-mobility .swiper-pagination-bullet-active {
+  background: var(--base-color-brand--orange);
+}
+
+.swiper-button-prev.is-project-detail-testimonial.is-mobility,
+.swiper-button-next.is-project-detail-testimonial.is-mobility {
+  position: static;
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: 0;
+}
+
+.swiper-button-prev.is-project-detail-testimonial.is-mobility::after,
+.swiper-button-next.is-project-detail-testimonial.is-mobility::after {
+  display: none;
+}
+
 /* ------------------------------------------------------- Project Details Team ------------------------------------------------------- */
 .swiper.is-project-details-team {
   overflow: visible;
@@ -210,6 +255,10 @@
 
 /* ------------------------------------------------------- Mobility Gallery ------------------------------------------------------- */
 .swiper-wrapper.is-mobility-gallery {
+  height: 70vh;
+}
+
+.swiper-wrapper.is-mobility-gallery {
   display: flex;
   flex-wrap: nowrap;
 }
@@ -227,7 +276,6 @@
 .swiper.is-mobility-gallery .swiper-slide img {
   width: 100%;
   height: 100%;
-  max-height: 70vh;
   max-width: 100%;
   object-fit: contain;
 }

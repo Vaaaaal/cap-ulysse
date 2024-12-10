@@ -87,6 +87,10 @@
   opacity: 1 !important;
 }
 
+.navbar_content_blog {
+  opacity: 0;
+}
+
 /* ------------------------------------------------------ Mobility ------------------------------------------------------ */
 .timeline_content_wrapper_container .timeline_pin {
   color: var(--base-color-brand--orange);
